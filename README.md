@@ -9,6 +9,6 @@ zzst
 
 ## Build
 
-    $ cd src/st-0.9.2
+    $ cd src
     $ make
     $ sudo make install
