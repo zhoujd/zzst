@@ -1,0 +1,24 @@
+From 5bcfea6ab4f98ff9a280ea914910db407cbd8579 Mon Sep 17 00:00:00 2001
+From: Zachary Zhou <zchrzhou@gmail.com>
+Date: Sun, 27 Oct 2024 15:10:05 +0800
+Subject: [PATCH 1/6] st: one CLIPBOARD on selection
+
+---
+ src/x.c | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/src/x.c b/src/x.c
+index bd23686..3a3993d 100644
+--- a/src/x.c
++++ b/src/x.c
+@@ -686,6 +686,7 @@ setsel(char *str, Time t)
+ 	XSetSelectionOwner(xw.dpy, XA_PRIMARY, xw.win, t);
+ 	if (XGetSelectionOwner(xw.dpy, XA_PRIMARY) != xw.win)
+ 		selclear();
++  clipcopy(NULL);
+ }
+ 
+ void
+-- 
+2.25.1
+
