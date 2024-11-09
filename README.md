@@ -9,7 +9,7 @@ zzst
 
 ## Build dependence
 
-    $ sudo apt install libx11-dev libxft-dev libxinerama-dev
+    $ sudo apt install libx11-dev libxft-dev libxinerama-dev libgd-dev
 
 ## Build
 
