@@ -1381,6 +1381,13 @@ xinit(int cols, int rows)
 				PropModeReplace, (uchar *) icon_argb, icon_n);
 	}
 
+	if (nowindecors) {
+		Atom motifwmhints = XInternAtom(xw.dpy, "_MOTIF_WM_HINTS", False);
+		unsigned int data[] = { 0x2, 0x0, 0x0, 0x0, 0x0 };
+		XChangeProperty(xw.dpy, xw.win, motifwmhints, motifwmhints, 16,
+				PropModeReplace, (unsigned char *)data, 5);
+	}
+
 	xw.netwmpid = XInternAtom(xw.dpy, "_NET_WM_PID", False);
 	XChangeProperty(xw.dpy, xw.win, xw.netwmpid, XA_CARDINAL, 32,
 			PropModeReplace, (uchar *)&thispid, 1);
