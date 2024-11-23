@@ -16,3 +16,8 @@ zzst
     $ cd src
     $ make
     $ sudo make install
+
+## Init st
+
+    $ ./init.sh
+    $ ./init.sh all
