@@ -9,3 +9,10 @@ Paste       | `ctrl` + `shift` + `v`
 Zoom In     | `ctrl` + `shift` + `PageUp`
 Zoom Out    | `ctrl` + `shift` + `PageDown`
 Reset Zoom  | `ctrl` + `shift` + `Home`
+
+
+## Build errors
+
+```
+term.line[n][lastpos].mode -> TLINE(n)[lastpos].mode
+```
