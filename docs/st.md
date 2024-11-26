@@ -1,7 +1,14 @@
 st
 ==
 
+## Fetch Source
+
+```
+$ git clone https://git.suckless.org/st
+```
+
 ## Keyboard Shortcuts
+
 Action      | Key Combination
 ---         | ---
 Copy        | `ctrl` + `shift` + `c`
