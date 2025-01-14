@@ -21,5 +21,6 @@ Reset Zoom  | `ctrl` + `shift` + `Home`
 ## Build errors
 
 ```
+term.line[n] -> TLINE(n)
 term.line[n][lastpos].mode -> TLINE(n)[lastpos].mode
 ```
