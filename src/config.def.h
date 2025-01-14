@@ -188,7 +188,7 @@ static uint forcemousemod = ShiftMask;
 /*
  * Externalpipe command.
  */
-static char *editscreencmd[] = { "/bin/sh", "-c", "st-editscreen", NULL};
+static char *editscreencmd[] = { "editscreen", NULL};
 
 /*
  * Internal mouse shortcuts.
