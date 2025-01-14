@@ -3,8 +3,12 @@
 SCRIPT_ROOT=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
 
 install_dep() {
+    echo "Install apt pkg"
+    sudo apt update
     sudo apt install -y libx11-dev libxft-dev libxinerama-dev
     sudo apt install -y libgd-dev
+    echo "Install bin"
+    sudo cp -v $SCRIPT_ROOT/bin/st-editscreen /usr/local/bin/
     echo "Install dep done"
 }
 
