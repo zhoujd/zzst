@@ -7,8 +7,17 @@ zzst
     ## https://st.suckless.org/patches/
     ## https://dl.suckless.org/st/st-0.9.2.tar.gz
 
-## Build
+## Build dependence
 
-    $ cd src/st-0.9.2
+    $ sudo apt install libx11-dev libxft-dev libxinerama-dev libgd-dev
+
+## Build st
+
+    $ cd src
     $ make
     $ sudo make install
+
+## Init st
+
+    $ ./init.sh
+    $ ./init.sh all
