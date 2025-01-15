@@ -1,0 +1,5 @@
+#!/bin/bash
+tmpfile=$(mktemp /tmp/st-edit.XXXXXX)
+trap  'rm "$tmpfile"' 0 1 15
+cat > "$tmpfile"
+exec st -e ${EDITOR:-me} "$tmpfile"
