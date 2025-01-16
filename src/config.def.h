@@ -179,6 +179,7 @@ static uint forcemousemod = ShiftMask;
   * Externalpipe command.
   */
 static char *editscreencmd[] = { "editscreen", "externalpipe", NULL};
+static char *pagescreencmd[] = { "pagescreen", "externalpipe", NULL};
 
 /*
  * Internal mouse shortcuts.
@@ -216,6 +217,7 @@ static Shortcut shortcuts[] = {
 	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.i = -1} },
 	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
 	{ TERMMOD,              XK_E,           externalpipe,   {.v = editscreencmd} },
+	{ TERMMOD,              XK_P,           externalpipe,   {.v = pagescreencmd} },
 };
 
 /*
