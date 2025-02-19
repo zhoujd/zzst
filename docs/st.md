@@ -24,3 +24,9 @@ Reset Zoom  | `ctrl` + `shift` + `Home`
 term.line[n] -> TLINE(n)
 term.line[n][lastpos].mode -> TLINE(n)[lastpos].mode
 ```
+
+## Font on command line
+
+```
+$ st -f monospace:size=12
+```
