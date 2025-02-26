@@ -1,0 +1,7 @@
+#!/bin/bash
+
+ARG=(
+    -f "monospace:size=13"
+)
+
+exec st ${ARG[*]} "$@"

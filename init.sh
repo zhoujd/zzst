@@ -17,6 +17,7 @@ install_bin() {
     local apps=(
         $CORE_ROOT/bin/editscreen
         $CORE_ROOT/bin/pagescreen
+        $CORE_ROOT/bin/sterm
     )
     for app in ${apps[@]}; do
         sudo cp -fv $app $target
