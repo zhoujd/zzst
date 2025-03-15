@@ -9,6 +9,7 @@ zzst
 
 ## Build dependence
 
+    $ sudo apt install make gcc g++
     $ sudo apt install libx11-dev libxft-dev libxinerama-dev libgd-dev
 
 ## Build st

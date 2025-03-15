@@ -7,6 +7,7 @@ CORE_TOP=$(cd $CORE_ROOT/.. && pwd)
 install_dep() {
     echo "Install apt pkg"
     sudo apt update
+    sudo apt install -y make gcc g++
     sudo apt install -y libx11-dev libxft-dev libxinerama-dev
     sudo apt install -y libgd-dev
     echo "Install dep done"
