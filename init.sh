@@ -40,10 +40,18 @@ build() {
     echo "Build done"
 }
 
+clean() {
+    pushd $SCRIPT_ROOT
+    git clean -dfx
+    popd
+    echo "Clean done"
+}
+
 all() {
     install_dep
     install_bin
     build
+    clean
     echo "Install all done"
 }
 
@@ -54,6 +62,7 @@ Usage: $app {dep|build|-b|all|-a}
 dep          --    Install build dependence
 bin          --    Install bin
 build|-b     --    Build all
+clean|-c     --    Clean all
 all|-a       --    Install all
 EOF
 }
@@ -67,6 +76,9 @@ case $1 in
         ;;
     build|-b )
         build
+        ;;
+    clean|-c )
+        clean
         ;;
     all|-a )
         all
