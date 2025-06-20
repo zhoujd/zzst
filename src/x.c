@@ -2343,6 +2343,9 @@ main(int argc, char *argv[])
 	case 'd':
 		opt_dir = EARGF(usage());
 		break;
+	case 'X':
+		xresflag = 1;
+		break;
 	default:
 		usage();
 	} ARGEND;
@@ -2357,10 +2360,12 @@ run:
 	setlocale(LC_CTYPE, "");
 	XSetLocaleModifiers("");
 
-	if(!(xw.dpy = XOpenDisplay(NULL)))
+	if (!(xw.dpy = XOpenDisplay(NULL)))
 		die("Can't open display\n");
 
-	config_init();
+	if (xresflag)
+		config_init();
+
 	cols = MAX(cols, 1);
 	rows = MAX(rows, 1);
 	tnew(cols, rows);

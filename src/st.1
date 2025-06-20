@@ -3,7 +3,7 @@
 st \- simple terminal
 .SH SYNOPSIS
 .B st
-.RB [ \-aiv ]
+.RB [ \-aivX ]
 .RB [ \-c
 .IR class ]
 .RB [ \-d
@@ -29,7 +29,7 @@ st \- simple terminal
 .RI [ arguments ...]]
 .PP
 .B st
-.RB [ \-aiv ]
+.RB [ \-aivX ]
 .RB [ \-c
 .IR class ]
 .RB [ \-d
@@ -122,6 +122,9 @@ for more arguments and cases.
 .B \-v
 prints version information to stderr, then exits.
 .TP
+.B \-X
+loads color schemes in X11 resources.
+.TP
 .BI \-e " command " [ " arguments " "... ]"
 st executes
 .I command
@@ -182,4 +185,3 @@ See the LICENSE file for the terms of redistribution.
 .BR scroll (1)
 .SH BUGS
 See the TODO file in the distribution.
-
