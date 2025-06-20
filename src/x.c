@@ -2344,7 +2344,7 @@ main(int argc, char *argv[])
 		opt_dir = EARGF(usage());
 		break;
 	case 'X':
-		xresflag = 1;
+		xresflag = !xresflag;
 		break;
 	default:
 		usage();
