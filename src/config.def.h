@@ -174,7 +174,7 @@ static unsigned int mousebg = 0;
  * 1: enable
  * 0: disable
  */
-static unsigned int xresflag = 0;
+static unsigned int xresflag = 1;
 
 /*
  * Xresources preferences to load at startup
