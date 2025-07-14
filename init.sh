@@ -76,6 +76,7 @@ case $1 in
         ;;
     build|-b )
         build
+        clean
         ;;
     clean|-c )
         clean
