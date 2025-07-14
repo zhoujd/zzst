@@ -14,7 +14,7 @@ THEMES = $(addprefix $(TDIR)/, $(TFILES))
 all: st
 
 config.h: config.def.h $(THEMES)
-	cp -f $< $@
+	cp -f config.def.h $@
 
 .c.o:
 	$(CC) $(STCFLAGS) -c $<
