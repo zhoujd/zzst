@@ -7,10 +7,14 @@ include config.mk
 SRC = st.c x.c
 OBJ = $(SRC:.c=.o)
 
+TDIR = themes
+TFILES = default.h gruvbox.h
+THEMES = $(addprefix $(TDIR)/, $(TFILES))
+
 all: st
 
-config.h: config.def.h
-	cp config.def.h config.h
+config.h: config.def.h $(THEMES)
+	cp -f $< $@
 
 .c.o:
 	$(CC) $(STCFLAGS) -c $<
