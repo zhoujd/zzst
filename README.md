@@ -5,7 +5,7 @@ zzst
 
     ## https://st.suckless.org/
     ## https://st.suckless.org/patches/
-    ## https://dl.suckless.org/st/st-0.9.2.tar.gz
+    ## https://dl.suckless.org/st/st-0.9.3.tar.gz
 
 ## Build dependence
 
