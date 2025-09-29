@@ -9,7 +9,7 @@ static char *font = "SF Mono:size=13:antialias=true:autohint=true";
 /* Spare fonts */
 static char *font2[] = {
 	"PingFang SC:size=13:antialias=true:autohint=true"
-	"Symbols Nerd Font Mono:size=13:antialias=true:autohint=true"
+	"Symbols Nerd Font:size=13:antialias=true:autohint=true"
 };
 
 static int borderpx = 2;
