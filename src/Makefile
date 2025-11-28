@@ -8,7 +8,7 @@ SRC = st.c x.c
 OBJ = $(SRC:.c=.o)
 
 TDIR = themes
-TFILES = default.h gruvbox.h onedark.h nord.h
+TFILES = custom.h
 THEMES = $(addprefix $(TDIR)/, $(TFILES))
 
 all: st
