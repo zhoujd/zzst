@@ -8,8 +8,7 @@ SRC = st.c x.c
 OBJ = $(SRC:.c=.o)
 
 TDIR = themes
-TFILES = custom.h
-THEMES = $(addprefix $(TDIR)/, $(TFILES))
+THEMES = $(wildcard $(TDIR)/*.h)
 
 all: st
 
