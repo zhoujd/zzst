@@ -2066,13 +2066,13 @@ kpress(XEvent *ev)
 		len = XLookupString(e, buf, sizeof buf, &ksym, NULL);
 	}
 
-	if ( IS_SET(MODE_KBDSELECT) ) {
-		if ( match(XK_NO_MOD, e->state) ||
+	if (IS_SET(MODE_KBDSELECT)) {
+		if (match(XK_NO_MOD, e->state) ||
 		     (XK_Shift_L | XK_Shift_R) & e->state )
 			win.mode ^= trt_kbdselect(ksym, buf, len);
 		return;
 	}
-	
+
 	/* 1. shortcuts */
 	for (bp = shortcuts; bp < shortcuts + LEN(shortcuts); bp++) {
 		if (ksym == bp->keysym && match(bp->mod, e->state)) {
@@ -2304,12 +2304,14 @@ usage(void)
 }
 
 void
-toggle_winmode(int flag) {
+toggle_winmode(int flag)
+{
 	win.mode ^= flag;
 }
 
 void
-keyboard_select(const Arg *dummy) {
+keyboard_select(const Arg *dummy)
+{
 	win.mode ^= trt_kbdselect(-1, NULL, 0);
 }
 

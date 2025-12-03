@@ -2943,7 +2943,8 @@ redraw(void)
 }
 
 void
-set_notifmode(int type, KeySym ksym) {
+set_notifmode(int type, KeySym ksym)
+{
 	static char *lib[] = { " MOVE ", " SEL  "};
 	static Glyph *g, *deb, *fin;
 	static int col, bot;
@@ -2978,7 +2979,8 @@ set_notifmode(int type, KeySym ksym) {
 }
 
 void
-select_or_drawcursor(int selectsearch_mode, int type) {
+select_or_drawcursor(int selectsearch_mode, int type)
+{
 	int done = 0;
 
 	if (selectsearch_mode & 1) {
@@ -2991,14 +2993,16 @@ select_or_drawcursor(int selectsearch_mode, int type) {
 }
 
 void
-search(int selectsearch_mode, Rune *target, int ptarget, int incr, int type, TCursor *cu) {
+search(int selectsearch_mode, Rune *target, int ptarget, int incr, int type, TCursor *cu)
+{
 	Rune *r;
 	int i, bound = (term.col * cu->y + cu->x) * (incr > 0) + incr;
 
 	for (i = term.col * term.c.y + term.c.x + incr; i != bound; i += incr) {
 		for (r = target; r - target < ptarget; r++) {
-			if ( *r == term.line[(i + r - target) / term.col][(i + r - target) % term.col].u ) {
-				if ( r - target == ptarget - 1 )     break;
+			if (*r == term.line[(i + r - target) / term.col][(i + r - target) % term.col].u) {
+				if (r - target == ptarget - 1)
+					break;
 			} else {
 				r = NULL;
 				break;
@@ -3015,7 +3019,8 @@ search(int selectsearch_mode, Rune *target, int ptarget, int incr, int type, TCu
 }
 
 int
-trt_kbdselect(KeySym ksym, char *buf, int len) {
+trt_kbdselect(KeySym ksym, char *buf, int len)
+{
 	static TCursor cu;
 	static Rune target[64];
 	static int type = 1, ptarget, in_use;
@@ -3079,7 +3084,8 @@ trt_kbdselect(KeySym ksym, char *buf, int len) {
 		break;
 	case XK_Escape:
 	case XK_q:
-		if (!in_use)  break;
+		if (!in_use)
+			break;
 		selclear();
 	case XK_Return:
 	case XK_y:
