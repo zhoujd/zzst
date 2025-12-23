@@ -107,7 +107,7 @@ unsigned int tabspaces = 8;
 float alpha = 0.9;
 
 /* Terminal colors (16 first used in escape sequence) */
-#include "themes/nord.h"
+#include "themes/gruvbox.h"
 
 /*
  * Default shape of cursor
