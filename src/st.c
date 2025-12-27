@@ -2576,7 +2576,7 @@ eschandle(uchar ascii)
 		xfreetitlestack();
 		resettitle();
 		xloadcols();
-		xsetmode(0, MODE_HIDE);
+		xsetmode(0, MODE_BRCKTPASTE);
 		break;
 	case '=': /* DECPAM -- Application keypad */
 		xsetmode(1, MODE_APPKEYPAD);
