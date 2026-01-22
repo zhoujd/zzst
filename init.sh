@@ -4,12 +4,29 @@ SCRIPT_ROOT=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
 CORE_ROOT=$(cd $SCRIPT_ROOT && pwd)
 CORE_TOP=$(cd $CORE_ROOT/.. && pwd)
 
+source /etc/os-release
+
 install_dep() {
-    echo "Install apt pkg"
-    sudo apt update
-    sudo apt install -y make gcc g++
-    sudo apt install -y libx11-dev libxft-dev libxinerama-dev
-    sudo apt install -y libgd-dev
+    case $ID in
+        ubuntu|debian )
+            echo "Install apt pkg"
+            sudo apt update
+            sudo apt install -y \
+                 make gcc g++ \
+                 libx11-dev libxinerama-dev libxft-dev libgd-dev
+            ;;
+        void )
+            echo "Install xbps pkg"
+            sudo xbps-install -yu xbps
+            sudo xbps-install -Sy \
+                 make gcc pkg-config \
+                 libXft-devel gd-devel
+            ;;
+        * )
+            echo "Distro $ID not supported"
+            exit 1
+            ;;
+    esac
     echo "Install dep done"
 }
 
