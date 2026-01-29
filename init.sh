@@ -75,7 +75,7 @@ all() {
 usage() {
     app=$(basename $0)
     cat <<EOF
-Usage: $app {dep|build|-b|all|-a}
+Usage: $app {dep|bin|build|-b|all|-a}
 dep          --    Install build dependence
 bin          --    Install bin
 build|-b     --    Build all
