@@ -20,6 +20,7 @@ char *argv0;
 #include "arg.h"
 #include "st.h"
 #include "win.h"
+#include "rev.h"
 
 /* types used in config.h */
 typedef struct {
@@ -2361,7 +2362,7 @@ main(int argc, char *argv[])
 		opt_embed = EARGF(usage());
 		break;
 	case 'v':
-		die("%s " VERSION "\n", argv0);
+		die("%s " VERSION " %s\n", argv0, REV);
 		break;
 	case 'd':
 		opt_dir = EARGF(usage());

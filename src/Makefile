@@ -9,17 +9,21 @@ OBJ = $(SRC:.c=.o)
 
 TDIR = themes
 THEMES = $(wildcard $(TDIR)/*.h)
+REV = rev.h
 
 all: st
 
 config.h: config.def.h $(THEMES)
 	cp -f config.def.h $@
 
+$(REV):
+	@./ver.sh $@
+
 .c.o:
 	$(CC) $(STCFLAGS) -c $<
 
 st.o: config.h st.h win.h
-x.o: arg.h config.h st.h win.h
+x.o: arg.h config.h st.h win.h $(REV)
 
 $(OBJ): config.h config.mk
 
@@ -27,7 +31,7 @@ st: $(OBJ)
 	$(CC) -o $@ $(OBJ) $(STLDFLAGS)
 
 clean:
-	rm -f st $(OBJ) st-$(VERSION).tar.gz config.h
+	rm -f st $(OBJ) st-$(VERSION).tar.gz config.h $(REV)
 
 dist: clean
 	mkdir -p st-$(VERSION)
