@@ -2362,7 +2362,7 @@ main(int argc, char *argv[])
 		opt_embed = EARGF(usage());
 		break;
 	case 'v':
-		die("%s " VERSION " %s\n", argv0, REV);
+		die("%s " VERSION " %s %s\n", argv0, DATE, REV);
 		break;
 	case 'd':
 		opt_dir = EARGF(usage());
