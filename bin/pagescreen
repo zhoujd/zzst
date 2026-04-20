@@ -1,5 +1,5 @@
 #!/bin/sh
 tmpfile=$(mktemp /tmp/st-page.XXXXXX)
-trap 'rm "$tmpfile"' 0 1 15
+trap 'rm -f "$tmpfile"' 0 1 15
 cat > "$tmpfile"
 exec st -e ${PAGER:-less} "$tmpfile"
