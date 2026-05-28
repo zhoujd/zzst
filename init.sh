@@ -61,7 +61,7 @@ build() {
 
 clean() {
     pushd $SCRIPT_ROOT
-    git clean -dfx
+    make -C src clean
     popd
     echo "Clean done"
 }
