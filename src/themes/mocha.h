@@ -1,3 +1,8 @@
+/*
+ * mocha.h
+ * https://catppuccin.com/palette/
+ */
+
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	/* 8 normal colors */
@@ -22,7 +27,7 @@ static const char *colorname[] = {
 
 	[256] = "#CDD6F4", /* default foreground colour */
 	[257] = "#000000", /* default background colour */
-	[258] = "#F5E0DC", /*575268*/
+	[258] = "#F5E0DC", /* 575268 */
 };
 
 

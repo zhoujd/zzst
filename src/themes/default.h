@@ -1,4 +1,6 @@
-/* color */
+/*
+ * default.h
+ */
 
 static const char *colorname[] = {
 	/* 8 normal colors */

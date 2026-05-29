@@ -1,4 +1,7 @@
-/* color */
+/*
+ * gruvbox.h
+ * https://github.com/morhetz/gruvbox
+ */
 
 static const char *colorname[] = {
 	/* 8 normal colors */

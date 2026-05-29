@@ -1,4 +1,7 @@
-/* color */
+/*
+ * nord.h
+ * https://www.nordtheme.com/
+ */
 
 static const char *colorname[] = {
 	/* 8 normal colors */
