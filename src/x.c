@@ -2073,7 +2073,7 @@ kpress(XEvent *ev)
 			win.mode ^= trt_kbdselect(ksym, buf, len);
 		return;
 	}
-	
+
 	/* 1. shortcuts */
 	for (bp = shortcuts; bp < shortcuts + LEN(shortcuts); bp++) {
 		if (ksym == bp->keysym && match(bp->mod, e->state)) {
@@ -2294,11 +2294,11 @@ config_init(void)
 void
 usage(void)
 {
-	die("usage: %s [-aiv] [-c class] [-d path] [-f font]"
+	die("usage: %s [-aivx] [-c class] [-d path] [-f font]"
 	    " [-g geometry] [-n name] [-o file]\n"
 	    "          [-T title] [-t title] [-w windowid]"
 	    " [[-e] command [args ...]]\n"
-	    "       %s [-aiv] [-c class] [-d path] [-f font]"
+	    "       %s [-aivx] [-c class] [-d path] [-f font]"
 	    " [-g geometry] [-n name] [-o file]\n"
 	    "          [-T title] [-t title] [-w windowid] -l line"
 	    " [stty_args ...]\n", argv0, argv0);
@@ -2367,7 +2367,7 @@ main(int argc, char *argv[])
 	case 'd':
 		opt_dir = EARGF(usage());
 		break;
-	case 'X':
+	case 'x':
 		xresflag = !xresflag;
 		break;
 	default:
