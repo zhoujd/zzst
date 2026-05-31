@@ -30,7 +30,6 @@ static const char *colorname[] = {
 	[258] = "#F5E0DC", /* 575268 */
 };
 
-
 /*
  * foreground, background, cursor, reverse cursor
  */
