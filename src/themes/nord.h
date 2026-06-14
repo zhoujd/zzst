@@ -26,8 +26,8 @@ static const char *colorname[] = {
 
 	[256] = "#d8dee9", /* default foreground colour */
 	[257] = "#000000", /* default background colour */
-	[258] = "#cccccc",
-	[259] = "#555555",
+	[258] = "#d8dee9",
+	[259] = "#4c566a",
 };
 
 /*
