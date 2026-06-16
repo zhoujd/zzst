@@ -1143,6 +1143,21 @@ chdir_by_pid(pid_t pid)
 }
 
 void
+kclearreset(const Arg *arg)
+{
+	if (IS_SET(MODE_ALTSCREEN))
+		return;
+	term.histi = 0;
+	term.scr = 0;
+	treset();
+	tclearregion(0, 0, term.col-1, term.row-1);
+	term.c.x = 0;
+	term.c.y = 0;
+	ttywrite("\014", 1, 1);
+	tfulldirt();
+}
+
+void
 kscrolldown(const Arg* a)
 {
 	int n = a->i;
