@@ -5,11 +5,11 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "SF Mono:size=13:antialias=true:autohint=true";
+static char *font = "SF Mono:size=13:antialias=true";
 /* Spare fonts */
 static char *font2[] = {
-	"PingFang SC:size=13:antialias=true:autohint=true",
-	"Symbols Nerd Font:size=13:antialias=true:autohint=true",
+	"PingFang SC:size=13:antialias=true",
+	"Symbols Nerd Font:size=13:antialias=true",
 };
 
 static int borderpx = 2;
