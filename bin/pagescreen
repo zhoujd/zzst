@@ -1,5 +1,6 @@
 #!/bin/sh
-tmpfile=$(mktemp /tmp/st-page.XXXXXX)
-trap 'rm -f "$tmpfile"' 0 1 15
-cat > "$tmpfile"
-exec st -e ${PAGER:-less} "$tmpfile"
+cmd="${PAGER:-less} +G"
+tmp=$(mktemp /tmp/st-page.XXXXXX)
+trap 'rm -f "$tmp"' 0 1 15
+cat > "$tmp"
+exec st -e ${cmd} "$tmp"

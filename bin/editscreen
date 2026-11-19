@@ -1,5 +1,6 @@
 #!/bin/sh
-tmpfile=$(mktemp /tmp/st-edit.XXXXXX)
-trap 'rm -f "$tmpfile"' 0 1 15
-cat > "$tmpfile"
-exec st -e ${EDITOR:-me} "$tmpfile"
+cmd="${EDITOR:-me} +"
+tmp=$(mktemp /tmp/st-edit.XXXXXX)
+trap 'rm -f "$tmp"' 0 1 15
+cat > "$tmp"
+exec st -e ${cmd} "$tmp"
