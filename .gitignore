@@ -3,3 +3,6 @@
 config.h
 *.o
 st
+
+# ai agent local session transcripts
+.ai/
