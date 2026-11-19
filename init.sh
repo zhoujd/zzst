@@ -67,7 +67,6 @@ clean() {
 }
 
 all() {
-    install_dep
     install_bin
     build
     clean
